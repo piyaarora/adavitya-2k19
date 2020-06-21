@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/about/main-logo.png" />
     <title>aDAVitya 2K19</title>
 
@@ -144,7 +145,7 @@
     <!-- Header Area wrapper End -->
 
     <!-- Coundown Section Start -->
-    <section class="countdown-timer c-img section-padding">
+    <!-- <section class="countdown-timer c-img section-padding">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -157,12 +158,10 @@
                     <div class="row time-countdown justify-content-center wow fadeInUp" data-wow-delay="0.2s">
                         <div id="clock" class="time-count"></div>
                     </div>
-                    <!-- <a class="btn btn-primary btn-lg wow fadeInUp colwht" id="idcard" data-wow-delay="0.3s"
-                        style="background: #ff751a">Create ID Card</a> -->
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Coundown Section End -->
 
     <!-- About Section Start -->
@@ -171,42 +170,41 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-header text-center">
-                        <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Journey of aDAVitya</h1>
-                        <p class="wow fadeInDown" data-wow-delay="0.2s">The things that inspired us to bring this Tech
-                            Fest to you</p>
+                        <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">About aDAVitya</h1>
+                        <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">The things that inspired us to bring this Tech
+                            Fest to you</p> -->
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <div class="about-item">
-                        <img class="img-fluid" src="./assets/img/about/img11.jpg" alt="">
+                        <img class="img-fluid" src="./assets/img/about/star.jpeg" alt="">
                         <div class="about-text">
-                            <h3><a>What's Our Motive ?</a></h3>
-                            <p>Our motive is to bring exposure to students and bring out their skills, 
-                                to increase thier confidence and let them explore their inner selves more.</p>
+                            <h3><a>Star Night Guest</a></h3>
+                            <p>Gurnaam Bhullar, perfoming live at DAVIET.</p>
                             <!-- <a class="btn btn-common btn-rm" href="">Read More</a> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <div class="about-item">
-                        <img class="img-fluid" src="./assets/img/about/img22.jpg" alt="">
+                        <img class="img-fluid" src="./assets/img/about/club.jpeg" alt="">
                         <div class="about-text">
                             <h3><a>Clubs at DAVIET</a></h3>
                             <p>Students have developed various clubs and participate in them to explore their skills more.</p>
 
-                            <a class="btn btn-common btn-rm" href="">Read More</a>
+                            <a class="btn btn-common btn-rm" href="clubs.html">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <div class="about-item">
-                        <img class="img-fluid" src="./assets/img/about/img33.jpg" alt="">
+                        <img class="img-fluid" src="./assets/img/about/jour.jpeg" alt="">
                         <div class="about-text">
                             <h3><a>Past Journey of Adavitya</a></h3>
                             <p>Daviet has been organizing tech fest from past many years and it has been a great success.</p>
-                            <a class="btn btn-common btn-rm" href="">Read More</a>
+                            <!-- <a class="btn btn-common btn-rm" href="">Read More</a> -->
                         </div>
                     </div>
                 </div>
@@ -266,7 +264,7 @@
                         <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event
                             Schedules</h1>
                         <p class="wow fadeInDown" data-wow-delay="0.2s">Participate & Explore the Events at aDAVitya<br>
-                        <!-- <a class="btn btn-primary btn-lg wow fadeInUp colwht" id="idcard" data-wow-delay="0.3s"
+                        <!-- <a href="form.html" target="_blank" class="btn btn-primary btn-lg wow fadeInUp colwht" id="idcard" data-wow-delay="0.3s"
                         style="background: #ff751a">Create ID Card</a> -->
                         </p>
                     </div>
@@ -1106,14 +1104,18 @@
             <div class="modal-body">
                 <div class="form-main">
                     <div class="form-container">
-                        <form method="POST" class="appointment-form" id="appointment-form">
-                            <h2>Event Registration form</h2>
+                        <form onSubmit="registerStudent(event)" class="appointment-form" id="appointment-form">
+                            <h2>
+                                Register For
+                                <span id="event_name"></span>
+                                </h2>
                             <div class="form-group-1">
                                 <!-- <input type="text" name="title" id="title" placeholder="Title" required /> -->
-                                <input type="text" name="name" id="name" placeholder="Enter Your Name" required />
+                                <input type="hidden" name="event_id" id="event_id"/>
+                                <input type="text" name="student_name" id="student_name" placeholder="Enter Your Name" required />
                                 <!-- <input type="email" name="email" id="email" placeholder="Email" required /> -->
                                 <input type="number" name="phone_number" id="phone_number" placeholder="Phone number" required />
-                                <input type="name" name="uni_name" id="uni_name" placeholder="Enter University Name" required />
+                                <input type="name" name="university_name" id="university_name" placeholder="Enter University Name" required />
                                 <!-- <input type="number" name="uni_roll_number" id="uni_roll_number" placeholder="Enter University Roll No." required /> -->
                             </div>
                             <div class="form-submit">
@@ -1147,30 +1149,26 @@
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <!-- Team Item Starts -->
-                    <!-- <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-img">
-                            <img class="img-fluid" src="" alt="">
-                            <div class="team-overlay">
-                                <div class="overlay-social-icon text-center">
-                                    <ul class="social-icons">
-                                        <li><a href=""><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                                        <li><a href=""><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <a href="coordinators.html">
+                                <img class="img-fluid" src="./assets/img/team/principal.jpeg" alt="">
+                            </a>
                         </div>
                         <div class="info-text">
                             <h3><a></a></h3>
-                            <p>Staff Co-ordinators</p>
+                            <p>Principal, Daviet</p>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- Team Item Ends -->
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <!-- Team Item Starts -->
                     <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="team-img">
-                            <img class="img-fluid kaimg" src="./assets/img/team/kuds.jpeg" alt="">
+                            <a href="coordinators.html">
+                                <img class="img-fluid kaimg" src="./assets/img/team/kuds.jpeg" alt="">
+                            </a>
                         </div>
                         <div class="info-text">
                             <p>Student Co-ordinators</p>
@@ -1182,7 +1180,9 @@
                     <!-- Team Item Starts -->
                     <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
                         <div class="team-img">
-                            <img class="img-fluid" src="./assets/img/team/bhanu.jpeg" alt="">
+                            <a href="coordinators.html">
+                                <img class="img-fluid" src="./assets/img/team/bhanu.jpeg" alt="">
+                            </a>
                         </div>
                         <div class="info-text">
                             <p>Website team</p>
@@ -1192,7 +1192,7 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-common mt-30 wow fadeInUp colwht" data-wow-delay="1.9s">All Organizers</a>
+        <a href="coordinators.html" class="btn btn-common mt-30 wow fadeInUp colwht" data-wow-delay=".5s">All Organizers</a>
         </div>
     </section>
     <!-- Team Section End -->
@@ -1300,379 +1300,6 @@
             </section> -->
     <!-- Gallary Section End -->
 
-    <!-- Ask Question Section Start -->
-    <!-- <section id="faq" class="section-padding">
-                        <div class="container">
-                                    <div class="row">
-                                                <div class="col-12">
-                                                            <div class="section-title-header text-center">
-                                                                        <h1 class="section-title wow fadeInUp"
-                                                                                    data-wow-delay="0.2s">Ask Question?</h1>
-                                                                        <p class="wow fadeInDown" data-wow-delay="0.2s">Global
-                                                                                    Grand Event on Digital Design</p>
-                                                            </div>
-                                                </div>
-                                    </div>
-                                    <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                                            <div class="accordion">
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingOne">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionOne"
-                                                                                                            aria-expanded="true"
-                                                                                                            aria-controls="collapseOne">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            How to make
-                                                                                                            a new
-                                                                                                            event?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionOne" class="collapse"
-                                                                                                aria-labelledby="headingOne"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingTwo">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionTwo"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionTwo">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            Which
-                                                                                                            payment
-                                                                                                            methods do
-                                                                                                            you accept?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionTwo" class="collapse"
-                                                                                                aria-labelledby="headingTwo"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingThree">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionThree"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionThree">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            Which
-                                                                                                            document
-                                                                                                            can i bring
-                                                                                                            to meeting?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionThree" class="collapse"
-                                                                                                aria-labelledby="headingThree"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingThree">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionFour"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionFour">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            Who can
-                                                                                                            join at the
-                                                                                                            live event
-                                                                                                            venue?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionFour" class="collapse"
-                                                                                                aria-labelledby="headingThree"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                            </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                                                            <div class="accordion">
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingOne2">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionOne2"
-                                                                                                            aria-expanded="true"
-                                                                                                            aria-controls="collapseOne">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            How to make
-                                                                                                            a new
-                                                                                                            event?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionOne2" class="collapse"
-                                                                                                aria-labelledby="headingOne"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingTwo2">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionTwo2"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionTwo">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            Which
-                                                                                                            payment
-                                                                                                            methods do
-                                                                                                            you accept?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionTwo2" class="collapse"
-                                                                                                aria-labelledby="headingTwo"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingThree">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionFive"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionFive">
-                                                                                                            <i class="lni-pencil"></i>How
-                                                                                                            to set
-                                                                                                            price?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionFive" class="collapse"
-                                                                                                aria-labelledby="headingThree"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                                        <div class="card">
-                                                                                    <div class="card-header" id="headingThree">
-                                                                                                <div class="header-title"
-                                                                                                            data-toggle="collapse"
-                                                                                                            data-target="#questionSix"
-                                                                                                            aria-expanded="false"
-                                                                                                            aria-controls="questionSix">
-                                                                                                            <i class="lni-pencil"></i>
-                                                                                                            What our
-                                                                                                            price list?
-                                                                                                </div>
-                                                                                    </div>
-                                                                                    <div id="questionSix" class="collapse"
-                                                                                                aria-labelledby="headingThree"
-                                                                                                data-parent="#question">
-                                                                                                <div class="card-body">
-                                                                                                            Anim
-                                                                                                            pariatur
-                                                                                                            cliche
-                                                                                                            reprehenderit,
-                                                                                                            enim
-                                                                                                            eiusmod
-                                                                                                            high life
-                                                                                                            accusamus
-                                                                                                            terry
-                                                                                                            richardson
-                                                                                                            ad squid. 3
-                                                                                                            wolf moon
-                                                                                                            officia
-                                                                                                            aute, non
-                                                                                                            cupidatat
-                                                                                                            skateboard
-                                                                                                            dolor
-                                                                                                            brunch.
-                                                                                                            Food truck
-                                                                                                            quinoa
-                                                                                                            nesciunt
-                                                                                                            laborum
-                                                                                                            eiusmod.
-                                                                                                </div>
-                                                                                    </div>
-                                                                        </div>
-                                                            </div>
-                                                </div>
-                                    </div>
-                        </div>
-            </section> -->
-    <!-- Ask Question Section End -->
-
     <!-- Sponsors Section Start -->
     <!-- <section id="sponsors" class="section-padding">
         <div class="container">
@@ -1714,108 +1341,6 @@
     </section> -->
     <!-- Sponsors Section End -->
 
-    <!-- Contact Us Section -->
-    <!-- <section id="contact-map" class="section-padding">
-                        <div class="container">
-                                    <div class="row justify-content-center">
-                                                <div class="col-12">
-                                                            <div class="section-title-header text-center">
-                                                                        <h1 class="section-title wow fadeInUp"
-                                                                                    data-wow-delay="0.2s">Drop A
-                                                                                    Message</h1>
-                                                                        <p class="wow fadeInDown" data-wow-delay="0.2s">Global
-                                                                                    Grand Event on Digital Design</p>
-                                                            </div>
-                                                </div>
-                                                <div class="col-lg-7 col-md-12 col-xs-12">
-                                                            <div class="container-form wow fadeInLeft" data-wow-delay="0.2s">
-                                                                        <div class="form-wrapper">
-                                                                                    <form role="form" method="post" id="contactForm"
-                                                                                                name="contact-form"
-                                                                                                data-toggle="validator">
-                                                                                                <div class="row">
-                                                                                                            <div class="col-md-6 form-line">
-                                                                                                                        <div
-                                                                                                                                    class="form-group">
-                                                                                                                                    <input
-                                                                                                                                                type="text"
-                                                                                                                                                class="form-control"
-                                                                                                                                                id="name"
-                                                                                                                                                name="email"
-                                                                                                                                                placeholder="First Name"
-                                                                                                                                                required
-                                                                                                                                                data-error="Please enter your name">
-                                                                                                                                    <div
-                                                                                                                                                class="help-block with-errors"></div>
-                                                                                                                        </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-6 form-line">
-                                                                                                                        <div
-                                                                                                                                    class="form-group">
-                                                                                                                                    <input
-                                                                                                                                                type="email"
-                                                                                                                                                class="form-control"
-                                                                                                                                                id="email"
-                                                                                                                                                name="email"
-                                                                                                                                                placeholder="Email"
-                                                                                                                                                required
-                                                                                                                                                data-error="Please enter your Email">
-                                                                                                                                    <div
-                                                                                                                                                class="help-block with-errors"></div>
-                                                                                                                        </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-12 form-line">
-                                                                                                                        <div
-                                                                                                                                    class="form-group">
-                                                                                                                                    <input
-                                                                                                                                                type="tel"
-                                                                                                                                                class="form-control"
-                                                                                                                                                id="msg_subject"
-                                                                                                                                                name="subject"
-                                                                                                                                                placeholder="Subject"
-                                                                                                                                                required
-                                                                                                                                                data-error="Please enter your message subject">
-                                                                                                                                    <div
-                                                                                                                                                class="help-block with-errors"></div>
-                                                                                                                        </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-12">
-                                                                                                                        <div
-                                                                                                                                    class="form-group">
-                                                                                                                                    <textarea
-                                                                                                                                                class="form-control"
-                                                                                                                                                rows="4"
-                                                                                                                                                id="message"
-                                                                                                                                                name="message"
-                                                                                                                                                required
-                                                                                                                                                data-error="Write your message"></textarea>
-                                                                                                                        </div>
-                                                                                                                        <div
-                                                                                                                                    class="form-submit">
-                                                                                                                                    <button
-                                                                                                                                                type="submit"
-                                                                                                                                                class="btn btn-common"
-                                                                                                                                                id="form-submit"><i
-                                                                                                                                                            class="fa fa-paper-plane"
-                                                                                                                                                            aria-hidden="true"></i>
-                                                                                                                                                Send
-                                                                                                                                                Us
-                                                                                                                                                Now</button>
-                                                                                                                                    <div
-                                                                                                                                                id="msgSubmit"
-                                                                                                                                                class="h3 text-center hidden"></div>
-                                                                                                                        </div>
-                                                                                                            </div>
-                                                                                                </div>
-                                                                                    </form>
-                                                                        </div>
-                                                            </div>
-                                                </div>
-                                    </div>
-                        </div>
-            </section> --> -->
-    <!-- Contact Us Section End -->
-
     <!-- Footer Section Start -->
     <section id="contact">
         <footer class="footer-area section-padding">
@@ -1833,9 +1358,9 @@
                             <li><a href="#home">Home</a></li>
                             <li><a href="#journey">Journey</a></li>
                             <li><a href="#schedules">Events</a></li>
-                            <li><a href="#team">Organizers</a></li>
-                            <li><a href="#sponsers">Sponsers</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+                            <!-- <li><a href="#team">Organizers</a></li> -->
+                            <!-- <li><a href="#sponsers">Sponsers</a></li> -->
+                            <li><a href="http://www.davietjal.org/">Visit Daviet's Website</a></li>
                         </ul>
                     </div>
 
@@ -1871,9 +1396,9 @@
                 <div class="col-md-12">
                     <div class="site-info">
                         <!-- <p>© Designed and Developed by Bhanu Handa</p> -->
-                        <p>
+                        <p style="font-size:1rem">
                             AWS Server managed and hosted by 
-                            <a target="_blank" href="http://www.nugeninfo.com/">Nugen I.T. Services</a>
+                            <a target="_blank" href="http://www.nugeninfo.com/" style="font-size:1.1rem">Nugen I.T. Services</a>
                         </p>
                     </div>
                 </div>

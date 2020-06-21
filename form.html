@@ -5,32 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register Form</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font Icon -->
-    <link rel="stylesheet" href="/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
     <!-- Main css -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- other file css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
     <div class="form-main">
         <div class="form-container">
-            <form method="POST" class="appointment-form" id="appointment-form">
-                <h2>Event Registration form</h2>
+            <form class="appointment-form" id="appointment-form">
+                <h2>Identity Card generation form</h2>
                 <div class="form-group-1">
                     <!-- <input type="text" name="title" id="title" placeholder="Title" required /> -->
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name" required />
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                    <input type="number" name="phone_number" id="phone_number" placeholder="Phone number" required />
-                    <input type="name" name="uni_name" id="uni_name" placeholder="Enter University Name" required />
-                    <input type="number" name="uni_roll_number" id="uni_roll_number" placeholder="Enter University Roll No." required />
+                    <input type="text" name="student_name" id="student_name" placeholder="Enter Your Name" required />
+                    <input type="email" name="student_email" id="student_email" placeholder="Enter Email Id" required />
+                    <input type="number" name="phone_number" id="phone_number" placeholder="Enter Phone number" required />
+                    <input type="name" name="university_name" id="university_name" placeholder="Enter University Name" required />
+                    <input type="number" name="university_roll_number" id="university_roll_number" placeholder="Enter University Roll No." required />
+                    <p>Please upload your passport size photo</p>
+                    <input type="file" name="fileToUpload" id="fileToUpload" style="border-bottom:none">
+
                 </div>
                 <div class="form-submit">
-                    <input type="submit" name="submit" id="submit" class="submit" value="Register for the event" />
+                    <input type="button" onclick="generateIcard()" name="submit" id="submit" class="submit btn btn-common" value="Generate ID Card" />
+                    <!-- <div id="backToEvents" class="btn btn-secondary" data-dismiss="modal"> 
+                        <i class="fa fa-arrow-circle-left"></i>Go Back To Events</div> -->
                 </div>
             </form>
         </div>
     </div>
     <!-- JS -->
-    <script src="/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/assets/js/main-form.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/js/main-form.js"></script>
+    <script src="assets/js/icard.js"></script>
 </body>
 </html>
