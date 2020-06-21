@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Form</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="form-main">
+        <div class="form-container">
+            <form method="POST" class="appointment-form" id="appointment-form">
+                <h2>Event Registration form</h2>
+                <div class="form-group-1">
+                    <!-- <input type="text" name="title" id="title" placeholder="Title" required /> -->
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" required />
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                    <input type="number" name="phone_number" id="phone_number" placeholder="Phone number" required />
+                    <input type="name" name="uni_name" id="uni_name" placeholder="Enter University Name" required />
+                    <input type="number" name="uni_roll_number" id="uni_roll_number" placeholder="Enter University Roll No." required />
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Register for the event" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/js/main-form.js"></script>
+</body>
+</html>

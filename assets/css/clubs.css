@@ -1,0 +1,31 @@
+body {
+    /* background: #fff; */
+    background: url(/assets/img/about/countdown.png);  
+    background-size:contain;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 450px;
+    height: 350px;
+    background: #222;
+  }
+  .swiper-slide .imgbox{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+  }
+  .swiper-slide .imgbox img{
+    width:100%;
+    background-size: contain;
+  }
